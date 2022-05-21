@@ -10,7 +10,7 @@ This is an example of how you may give instructions on setting up your project l
 <br>
 1. Clone the repo
    ```sh
-   git clone https://github.com/nirmalKumawat-kgp/Movie-Rating-App.git
+   git clone https://github.com/nirmalKumawat-kgp/Social-Media-App.git
    ```
 2. Install NPM packages
    ```sh
