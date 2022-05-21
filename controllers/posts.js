@@ -87,6 +87,9 @@ exports.getPost = async (req, res, next) => {
   try {
     const post = await Post.findById(postId).populate("comments");
 
+    if (!post) {
+      return next(new ErrorResponse("No Post Found", 400));
+    }
     res.status(200).json({
       success: true,
       data: { ...post._doc, likes: post._doc.likes.length },

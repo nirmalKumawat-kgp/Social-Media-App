@@ -14,10 +14,6 @@ const { isAuthenticated } = require("../middleware/isAuthenticated");
 
 const router = express.Router();
 
-router.route("/test", (req, res) => {
-  console.log("Welcome To API");
-});
-
 // All endpoints related to User
 router.route("/authenticate").post(authenticateUser);
 router.route("/follow/:userId").post(isAuthenticated, followUser);
