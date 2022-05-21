@@ -11,9 +11,15 @@ connectDB();
 
 app.use(express.json());
 
+//fot testing
+app.get("/", (req, res) => res.send("Welcome to API"));
+
+//all the relevant routes are in routes folder
 app.use("/api", require("./routes/index"));
 
+//custom error handler middleware
 app.use(errorHandler);
+
 const server = app.listen(PORT, () => {
   console.log(`Server is listening on ${PORT}`);
 });
